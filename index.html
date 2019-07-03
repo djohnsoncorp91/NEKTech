@@ -3,16 +3,16 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="Stylesheets/Style.css">
-  <script src = "javascript/tabs.js"></script>
+  
   </head>
   
  <body>
   <h1>NekTech</h1>
 
   <div class = "tab">
-    <button class="tablink" onclick="openPage('Home', this, 'black)">Home</button>
-    <button class="tablink" onclick="openPage('Bio', this, black)">Bio</button>
-    <button class="tablink" onclick="openPage('About', this, black)">About</button>
+    <button class="tablink" onclick="openPage('Home', this, 'black')">Home</button>
+    <button class="tablink" onclick="openPage('Bio', this, 'black')">Bio</button>
+    <button class="tablink" onclick="openPage('About', this, 'black')">About</button>
   </div>
    
   <div id ="Home" class="tabcontent">
@@ -20,28 +20,23 @@
   </div>
    
  <script>
-function openPage(pageName, elemnt, color) {
+function openPage(pageName,elmnt,color) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i <tabcontent.length, i++) {
+  for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
-    
-    / Remove the background color of all tablinks/buttons
+  }
   tablinks = document.getElementsByClassName("tablink");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].style.backgroundColor = "";
   }
-
-  // Show the specific tab content
   document.getElementById(pageName).style.display = "block";
-
-  // Add the specific color to the button used to open the tab content
   elmnt.style.backgroundColor = color;
 }
 
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click(); 
-</script>  
+document.getElementById("defaultOpen").click();
+</script>
  </body>
 </html>
 
