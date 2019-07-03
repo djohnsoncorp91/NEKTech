@@ -1,5 +1,10 @@
 
-
+.header img {
+  float: left;
+  width: 1000px;
+  height: 100px;
+  background: #555;
+}
 
 /*Enable full page tabs*/
 body, html {
