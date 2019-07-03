@@ -8,6 +8,7 @@
 
 /*Enable full page tabs*/
 body, html {
+  position: relative;
   margin: 0;
   font-family: Arial;
 }
