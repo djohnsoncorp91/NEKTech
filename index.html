@@ -11,6 +11,13 @@ body, html {
   margin: 0;
   font-family: Arial;
 }
+  
+  .header img {
+  float: left;
+  width: 1000px;
+  height: 100px;
+  background: #555;
+}
 
 /* Style tab links */
 .tablink {
@@ -44,7 +51,9 @@ body, html {
 </style>
 </head>
 <body>
-
+<div class="header">
+  <img id="myImg" src="img_snow.jpg" alt="Snow">
+  </div>
 <button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
 <button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
 <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
