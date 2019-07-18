@@ -72,8 +72,14 @@
         Nek Technologies ensure that your web app and mobile app is built with the latest technology. The app
         runs efficiently
       </p>
+  </div>
   
-  
+  <button class="accordian">Database Support</button>
+    <div class="panel">
+      <p>
+        Maintain and provide adequate support to databases and servers
+      </p>
+  </div>
   
   
   
@@ -90,7 +96,22 @@
   
   
   <script>
+    var acc = document.getElementsByClassName("accordian");
+    var i;
     
+    for(i=0; i <acc.length; i++) {
+      acc[i].addEventListener("click", function() 
+      {
+        this.classList.toggle("active);
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+        
     
     
   </script>
