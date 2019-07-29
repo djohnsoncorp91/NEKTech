@@ -1,9 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
 <style>
-.accordion {
+  
+   body, html {
+    height: 100%;
+    padding: 0;
+    <!--background-color: black;-->
+  }
+  
+  
+ .accordion {
   background-color: #eee;
   color: #444;
   cursor: pointer;
@@ -17,37 +30,103 @@
 }
 
 .active, .accordion:hover {
-  background-color: #ccc; 
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
 }
 
 .panel {
   padding: 0 18px;
-  display: none;
   background-color: white;
+  max-height: 0;
   overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
+  
+  .footer 
+  {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+  
+  .navbar {
+    margin-bottom: 0!important;
+  }
 </style>
 </head>
 <body>
 
-<h2>Accordion</h2>
-
-<button class="accordion">Section 1</button>
-<div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Nek Technologies</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="News.html">News</a></li>
+      <li class="active"><a href="About.html">Services</a></li>
+      <li><a href="Contacts.html">Contact</a></li>
+    </ul>
+  </div>
+  </nav>
+  
+<!--
+  main content
+-->
+  
+  
+  <button class ="accordion">Custom Web Design</button>
+  <div class="panel">
+    <p>
+      Nek Technologies ensure that your website is professionally built from the ground up with unique features and designs. We provide
+      functionality that enables your website to have easy navigation and user friendly.
+    </p>
+  </div>
+  
+  <button class="accordion">Mobile/Web App Design</button>
+    <div class="panel">
+      <p>
+        Nek Technologies ensure that your web app and mobile app is built with the latest technology. The app
+        runs efficiently
+      </p>
+  </div>
+  
+  <button class="accordion">Database Support</button>
+    <div class="panel">
+      <p>
+        Maintain and provide adequate support to databases and servers
+      </p>
+  </div>
+  
+  
+  
+  
+<div class="footer">
+  <p>Nek Technologies 2019</p>
+</div>  
+  
+<div class="container">
+  <p>this is the about page</p>
 </div>
 
-<button class="accordion">Section 2</button>
-<div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-
-<button class="accordion">Section 3</button>
-<div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-
-<script>
+</body>
+  
+ <script>
 var acc = document.getElementsByClassName("accordion");
 var i;
 
@@ -55,14 +134,13 @@ for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
     } else {
-      panel.style.display = "block";
-    }
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
   });
 }
 </script>
 
-</body>
 </html>
