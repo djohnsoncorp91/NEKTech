@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel='stylesheet' href='styles.css'/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   
@@ -29,24 +33,167 @@
     color: white;
   }
   
-  .footer 
-  {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: black;
-    color: white;
-    text-align: center;
-  }
   
     .navbar {
     margin-bottom: 0!important;
   }
+    
+    /* Set a style for all buttons */
+            button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                font-size: 19px;
+            }
+            
+            button:hover {
+                opacity: 0.8;
+            }
+            
+            
+            .Fbutton{
+                padding: 0;
+                border-radius: 100%;
+                background-color: #000080;
+                margin-right: 20px;
+                font-size: 22px;
+            }
+            
+            .cancelbtn {
+                width: auto;
+                padding: 10px 18px;
+                background-color: #f44336;
+            }
+            
+            /*Avatar pic for pop up fix*/
+            
+            
+            .container {
+                padding: 16px;
+            }
+                
+            span.psw {
+                float: right;
+                padding-top: 16px;
+            }
+                
+            /* The Modal (background) */
+            .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.2); /* Black w/ opacity */
+                padding-top: 60px;
+            }
+                
+            /* Modal Content/Box */
+            .modal-content {
+                background-color: #fefefe;
+                margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+                border: 1px solid #888;
+                width: 60%; /* Could be more or less, depending on screen size */
+                display: flex;
+                justify-content: flex-end;
+            }
+    
+                     /*Contact Form Styling*/
+            /* Style inputs with type="text", select elements and textareas */
+                input[type=text], select, textarea {
+                  width: 100%;
+                  padding: 12px;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;
+                  box-sizing: border-box;
+                  margin-top: 6px;
+                  margin-bottom: 16px;
+                  resize: vertical;
+                }
+                input[type=submit] {
+                  background-color: #000080;
+                  color: white;
+                  padding: 12px 20px;
+                  border: none;
+                  border-radius: 4px;
+                  cursor: pointer;
+                }
+                input[type=submit]:hover {
+                  background-color: #000080;
+                }
+                .contactForm {
+                  border-radius: 5px;
+                  background-color: #f2f2f2;
+                  padding: 20px;
+                }
+            
+            input[type=submit]:hover {
+                  opacity: 0.8;
+            }
+                
+            /* Contact Content/Box */
+            .contactForm-content {
+                display: flex;
+                justify-content: flex-end;
+                background-color: #fefefe;
+                margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+                border: 1px solid #888;
+                width: 60%; /* Could be more or less, depending on screen size */
+            }
+    
+         /* Footer-Contact*/
+              .footer {
+                  display: flex;
+                  justify-content: space-between;
+                }
+                .footer-item {
+                  color: white;
+                  background-color: #99badd;
+                  height: 200px;
+                  flex: 1;
+                }
+                
+                .footer-three {
+                  flex: 2;
+                }
+                
+                .footer-three {
+                  background-color: #585858;
+                }
+    
+                .footer-one,
+                .footer-three {
+                  background-color: black;
+                  flex: initial;
+                  width: 300px;
+                }
+                
+                .insight{
+                    margin-left: 8px;
+                } 
+    
+          .footers{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: white;
+            text-align: center;
+          }
 </style>
 </head>
 <body>
-
+  
+  
+<!--Menu-->
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -61,13 +208,54 @@
   </div>
 </nav>
   
-<div class="footer">
-  <p>Nek Technologies 2019</p>
-</div>  
+  <!--Banner-->
+            <div class="header-container">
+               <div class ="header">
+                    <div class="mySlides">
+                              <div class="second">
+                                 <div class="contactM">Contact</div>
+                              </div>
+                     </div>
+               </div>
+              </div>
   
-<div class="container">
-  <p>this is the contacts page</p>
-</div>
+  <!--Contact Form-->
+            <div class="contactForm">
+                    <form class="contactForm-content" method="post" action="mailto:joshua_townsend5@yahoo.com?subject=Questions" enctype="text/plain" >
+                         <div class="container">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Full name..">
+
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" placeholder="Email">
+                           
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Subject"> 
+
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Write here.." style="height:200px"></textarea>
+                             <input type="submit" value="Submit" />
+                         </div>
+                    </form>
+             </div>
+  
+  <!--Contact Form-->
+   <div class='footer'>
+                  <div class='footer-item footer-one'>
+                        <h6 class="insight">Contact Us</h6>
+                            <ul class="insight" style="list-style-type:none;">
+                                 <li><i class="fa fa-envelope" style="font-size:24px"></i><a href="mailto:NeKTech@gmail.com"> NeKTech@gmail.com</a></li>
+                                  <br/>
+                                 <li><i class="fa fa-phone" style="font-size:24px"></i><a href="tel:757-803-4308"> 757-803-4308 </a>
+                            </ul>
+                   </div>
+                  <div class='footer-item footer-two'>
+                    <div class="footer.s">
+                      <p>Nek Technologies 2019</p>
+                    </div>
+                  </div>
+                  <div class='footer-item footer-three'></div>
+                </div>
 
 </body>
   
