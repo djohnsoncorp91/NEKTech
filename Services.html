@@ -82,30 +82,28 @@
                   text-decoration: none;
             }
   
-  .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("IMG_1463.png");
-    display:block;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding-top: 0;
-    height: 70%;
-  }
-  
-  
-  .hero-text {
-    color: white;
-    display: flex;
-     justify-content: center;
+  .header-container {
+            color: #FFFFFF;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),url("IMG_1463.png");
+            height: 70%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+            
+        .header {
+            width: 1500px;
+            height: 400px;
+            display: flex;
+           justify-content: center;
            align-items: center;
           font-size: 95px;
-    width: 1500px;
-    
-  }
+             /* Add this */
+          }
+
   
   .navbar {
     margin-bottom: 0!important;
@@ -172,12 +170,16 @@
   </div>
 </nav>
 
-<div class="hero-image">
-  <div class="hero-text">
-    <div class="second">
-       <div class="contactM">What We Can <br>Do For You</div>
-  </div>
- </div>
+  <!--Banner-->
+            <div class="header-container">
+               <div class ="header">
+                    <div class="mySlides">
+                              <div class="second">
+                                 <div class="serviceM">What We Offer<div>
+                              </div>
+                     </div>
+               </div>
+              </div>
 
   
 <div class="container">
