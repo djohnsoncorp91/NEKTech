@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel='stylesheet' href='styles.css'/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   
@@ -27,17 +31,18 @@
   content: "\2212";
 }
 
-    
- .footer 
-  {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: black;
-   color: white;
-   text-align: center;
+  .navbar {
+    margin-bottom: 0!important;
   }
+ 
+        /*No underline button*/
+            a:link {
+                  text-decoration: none;
+            }
+            a:visited {
+                  text-decoration: none;
+            }
+
   
   .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -60,9 +65,70 @@
     color: white;
   }
   
-  .navbar {
-    margin-bottom: 0!important;
-  }
+       .header-container {
+            color: #FFFFFF;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),url("dc-1.jpg");
+            height: 70%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+            
+        .header {
+            display: flex;
+           justify-content: center;
+           align-items: center;
+          font-size: 95px;
+          }
+    
+        /* Footer-Contact*/
+              .footer {
+                  display: flex;
+                  justify-content: space-between;
+                }
+    
+                .footer-item {
+                  color: white;
+                  background-color: #585858;
+                  height: 200px;
+                  flex: 1;
+                }
+                
+                .footer-three {
+                  flex: 2;
+                }
+                
+                .footer-two {
+                  background-color: #222;
+                  display: flex;
+                  align-items: flex-end;
+                }
+    
+                .footer-one,
+                .footer-three {
+                  background-color: black;
+                  flex: initial;
+                  width: 300px;
+                }
+                
+                .insight{
+                } 
+    
+              .insights{
+                margin-left: 8px;
+              }
+    
+          .footers{
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    color: white;
+                    text-align: center;
+           }
+  
 </style>
 </head>
 <body>
@@ -81,19 +147,40 @@
   </div>
 </nav>
 
-<div class="hero-image">
-  <div class="hero-text">
-    <h1>Put our Mission here"</h1>
-  </div>
- </div>
-<div class="footer">
-  <p>Nek Technologies 2019</p>
-</div>
+    <!--Banner-->
+            <div class="header-container">
+               <div class ="header">
+                    <div class="mySlides">
+                              <div class="second">
+                                 <div class="mission">Put our Mission here</div>
+                              </div>
+                     </div>
+               </div>
+              </div>
   
+  <!--Info-->
 <div class="container">
   <h3>Home Page</h3>
   <p></p>
 </div>
+  
+    <!--Footer-->
+   <div class='footer'>
+                  <div class='footer-item footer-one'>
+                             <br/>
+                            <ul class="insight" style="list-style-type:none;">
+                                 <li><i class="fa fa-envelope" style="font-size:24px"></i><a href="mailto:NeKTech@gmail.com"> NeKTech@gmail.com</a></li>
+                                  <br/>
+                                 <li><i class="fa fa-phone" style="font-size:24px"></i><a href="tel:757-803-4308"> 757-803-4308 </a>
+                            </ul>
+                   </div>
+                  <div class='footer-item footer-two'>
+                    <div class="footers">
+                      <p>Nek Technologies 2019</p>
+                    </div>
+                  </div>
+                  <div class='footer-item footer-three'></div>
+                </div>
 
 </body>
   
